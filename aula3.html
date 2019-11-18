@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Java Script</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            color:black;
+            font: normal 20pt arial;
+            }
+        h1{
+            color: rgb(107, 107, 25);
+            text-align-last: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vamos lá!</h1>
+    <p>Testando condicionais</p>
+    <script>
+        var nome = window.prompt('Informe seu nome: ')
+        var idade = Number(window.prompt('Por favor, digite sua idade: '))
+     
+        if (idade < 18){
+            document.write('Olá ' + nome, '! Infelizmente o conteúdo desse site é impróprio para menores de idade.')
+        }else if (idade >= 18){
+            document.write('Seja bem vindo ' + nome, '! Você passou pelo critério de avaliação etária.')
+        }
+    </script>
+
+</body>
+</html>

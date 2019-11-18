@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rocket - Aula 4</title>
+</head>
+<body>
+    <div>
+        <button ondblclick=tesMouse()>
+            Click twice
+        </button>
+    </div>
+    <div onkeydown=tesTeclado()>
+        <input type="app">
+    </div>
+
+    <script>
+        var i = 0, j = 0
+        
+        function tesMouse(){
+            if(i==0){
+                alert("Be careful!")
+                i++
+            }
+        }
+
+        function tesTeclado(){
+            if(j==0){
+                alert("Keyboard working!")
+                j++
+            }
+        }
+    </script>
+</body>
+</html>
