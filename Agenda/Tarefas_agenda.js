@@ -5,22 +5,22 @@ var buttonElement = document.querySelector('#app button');
 
 var works = JSON.parse(localStorage.getItem('listWorks')) || [];
 
-renderFazeres()
-buttonElement.onclick = addTarefa
+renderWorks()
+buttonElement.onclick = addNewJob
 
 function addNewJob() {
-    var newJob = jobElement.value + timeElement.value;
+    var newJob = jobElement.value + ' - ' + timeElement.value;
     works.push(newJob);
-    jobElement = '';
-    timeElement = '';
-    function saveListWorks();
-    function renderWorks();
+    jobElement.value = '';
+    timeElement.value = '';
+    saveListWorks();
+    renderWorks();
 }
 
 function deleteJob(pos) {
-    works.slice(pos, 1);
-    function saveListWorks();
-    function renderWorks();
+    works.splice(pos, 1);
+    saveListWorks();
+    renderWorks();
 }
 
 function saveListWorks() {
@@ -32,13 +32,13 @@ function renderWorks() {
 
     for(const [pos, job] of works.entries()){
         var jobElement = document.createElement('li');
-        var jobText = document.createTextNode(job, time);
+        var jobText = document.createTextNode(job);
         jobElement.appendChild(jobText);
 
         var btElement = document.createElement('button');
         var buttonText = document.createTextNode('Excluir');
         btElement.appendChild(buttonText);
-        btElement.setAttribute('onclick', 'deletejob('+ pos +')');
+        btElement.setAttribute('onclick', 'deleteJob('+ pos +')');
 
         jobElement.appendChild(btElement);
         listElement.appendChild(jobElement);
